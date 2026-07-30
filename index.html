@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="雾灯写真工作室示例网站：作品展示、拍摄服务与档期预约。" />
+    <title>雾灯写真｜让角色真正站进光里</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="雾灯写真首页">雾灯写真</a>
+      <nav aria-label="主导航">
+        <a href="#work">作品</a>
+        <a href="#service">拍摄</a>
+        <button class="nav-cta" type="button" data-open-booking>预约档期</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="hero-brand">WUDENG PORTRAIT</p>
+          <h1 id="hero-title">让角色真正<br />站进光里</h1>
+          <p class="hero-copy">漫展跟拍与角色主题创作，保留你最想成为的那一刻。</p>
+          <button class="primary-cta" type="button" data-open-booking>查看近期档期</button>
+        </div>
+        <a class="scroll-cue" href="#work" aria-label="向下查看作品"><span></span>Scroll</a>
+      </section>
+
+      <section class="work" id="work" aria-labelledby="work-title">
+        <div class="section-heading reveal">
+          <p>Selected work · 2026</p>
+          <h2 id="work-title">角色之外，<br />仍然是你。</h2>
+        </div>
+        <div class="work-layout">
+          <figure class="work-main reveal">
+            <img src="assets/editorial-gold.png" alt="身穿象牙白金色幻想服装的成年模特写真" />
+            <figcaption><span>Original fantasy</span><span>Shanghai · 06</span></figcaption>
+          </figure>
+          <div class="work-note reveal">
+            <span class="work-index">01</span>
+            <p>从服装质感、动作到环境光线，共同完成一张属于角色的电影剧照。</p>
+          </div>
+          <figure class="work-secondary reveal">
+            <img src="assets/hero-cosplay.png" alt="身穿原创黑银色服装的成年模特漫展写真" />
+            <figcaption><span>Convention portrait</span><span>Hangzhou · 07</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="service" id="service" aria-labelledby="service-title">
+        <div class="service-intro reveal">
+          <p>Photography service</p>
+          <h2 id="service-title">把注意力留给角色，<br />其余交给我们。</h2>
+        </div>
+        <ol class="service-list">
+          <li class="reveal"><span>01</span><strong>确认主题</strong><p>角色、场景与想要的情绪。</p></li>
+          <li class="reveal"><span>02</span><strong>现场拍摄</strong><p>动作引导与光线设计。</p></li>
+          <li class="reveal"><span>03</span><strong>精选交付</strong><p>7 日内完成精修与返图。</p></li>
+        </ol>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div class="final-backdrop"></div>
+        <div class="final-content reveal">
+          <p>August booking</p>
+          <h2 id="cta-title">下一次出发，<br />从一张照片开始。</h2>
+          <button class="primary-cta light" type="button" data-open-booking>预约拍摄</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top">雾灯写真</a>
+      <p>示例网站 · 图片为 AI 生成的原创演示素材</p>
+      <p>© 2026 Wudeng Portrait</p>
+    </footer>
+
+    <dialog class="booking-dialog" id="booking-dialog">
+      <form method="dialog" class="booking-panel" id="booking-form">
+        <button class="close-dialog" type="button" data-close-booking aria-label="关闭">×</button>
+        <p>Booking request</p>
+        <h2>告诉我们你的拍摄计划</h2>
+        <label>称呼<input name="name" autocomplete="name" required placeholder="怎么称呼你" /></label>
+        <label>拍摄类型<select name="type"><option>漫展跟拍</option><option>主题约拍</option><option>棚拍创作</option></select></label>
+        <label>计划日期<input name="date" type="date" required /></label>
+        <label>补充说明<textarea name="note" rows="3" placeholder="角色、城市或其他想法"></textarea></label>
+        <button class="submit-booking" type="submit">生成预约信息</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
